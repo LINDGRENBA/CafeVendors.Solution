@@ -29,6 +29,11 @@ namespace CafeVendors.Models
       return _vendorList;
     }
 
+    public static Vendor FindVendor(int searchId)
+    {
+      return _vendorList[searchId];
+    }
+
   }
 }
 
