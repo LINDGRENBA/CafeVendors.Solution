@@ -15,7 +15,7 @@ namespace CafeVendors.Models
     {
       Title = title;
       Description = description;
-      Price = 5;
+      Price = price;
       Date = date;
       _ordersList.Add(this);
       Id = _ordersList.Count;
