@@ -31,6 +31,11 @@ namespace CafeVendors.Models
       List<Order> newOrderList = new List<Order> {};
       return newOrderList;
     }
+
+    public static Order FindOrder(int searchId)
+    {
+      return _ordersList[searchId];
+    }
   }
 }
 

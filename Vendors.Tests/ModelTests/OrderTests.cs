@@ -60,5 +60,14 @@ namespace CafeVendors.Tests
       List<Order> result = Order.GetAll();
       Assert.AreEqual(anotherList, result);
     }
+
+    [TestMethod]
+    public void FindOrder_ReturnsOrderByIdSearch_Vendor()
+    {
+      Order firstOrder = new Order("Rita's Order", "Details of Rita's weekly order", 20, "Every Monday");
+      Order secondOrder = new Order("Kate's order", "Details of Kate's order.", 15, "1st of the month");
+      Order result = Order.FindOrder(1);
+      Assert.AreEqual(firstOrder, result);
+    }
   }
 }

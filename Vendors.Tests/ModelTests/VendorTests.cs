@@ -7,7 +7,6 @@ namespace CafeVendors.Tests
 {
   [TestClass]
   public class VendorTests : IDisposable 
-  //VendorTest ?
   {
     public void Dispose()
     {
