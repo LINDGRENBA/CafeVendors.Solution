@@ -13,10 +13,10 @@ namespace CafeVendors.Models
 
     public Order(string title, string description, int price, string date)
     {
-      Title = "";
-      Description = "";
-      Price = 5;
-      Date = "";
+      Title = title;
+      Description = description;
+      Price = price;
+      Date = date;
       _ordersList.Add(this);
       Id = _ordersList.Count;
     }
