@@ -20,6 +20,17 @@ namespace CafeVendors.Models
       _ordersList.Add(this);
       Id = _ordersList.Count;
     }
+
+    public static void ClearAll()
+    {
+      _ordersList.Clear();
+    }
+
+    public static List<Order> GetAll()
+    {
+      List<Order> newOrderList = new List<Order> {};
+      return newOrderList;
+    }
   }
 }
 
