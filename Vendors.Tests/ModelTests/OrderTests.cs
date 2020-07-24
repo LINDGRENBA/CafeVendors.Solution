@@ -16,7 +16,7 @@ namespace CafeVendors.Tests
     }
 
     [TestMethod]
-    public void OrderConstructor_CreatesOrderInstanceWithFields_String()
+    public void OrderConstructor_CreatesOrderInstanceWithTitleDescriptionAndDate_String()
     {
       string title = "Rita's weekly croissant order";
       string description = "Details about Rita's weekly croissant order.";
@@ -29,6 +29,18 @@ namespace CafeVendors.Tests
       Assert.AreEqual(title, titleResult);
       Assert.AreEqual(description, descriptionResult);
       Assert.AreEqual(date, dateResult);
+    }
+
+        [TestMethod]
+    public void OrderConstructor_CreatesOrderInstanceWithPrice_Int()
+    {
+      string title = "Rita's weekly croissant order";
+      string description = "Details about Rita's weekly croissant order.";
+      int price = 20;
+      string date = "Every Monday.";
+      Order ritasOrder = new Order(title, description, price, date);
+      int result = ritasOrder.Price;
+      Assert.AreEqual(price, result);
     }
   }
 }
