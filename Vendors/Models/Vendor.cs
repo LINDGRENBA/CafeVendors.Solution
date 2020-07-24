@@ -26,8 +26,7 @@ namespace CafeVendors.Models
 
     public static List<Vendor> GetAll()
     {
-      List<Vendor> newVendor = new List<Vendor> {};
-      return newVendor;
+      return _vendorList;
     }
 
   }
