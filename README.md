@@ -20,10 +20,8 @@ _Keep track of your Vendors with this easy to use organizer. Add new Vendors and
 | Program will clear list of all Vendors | Delete | All Vendors deleted | Y |
 | Program should create and instance of Order class with Title, Description, Price, Date and Id | Order ritasWeeklyOrder = new Order() {"Croissants", "A weekly order of 15 croissants for Rita's flower shop", 20, "Weekly"} | ritasWeeklyOrder = {Title: "Croissants", Description: "A weekly order of 15 croissants for Rita's flower shop", Price: 20, Date: "Weekly", Id: 1} | Y |
 | Program should add each new Order to a list associated with a Vendor and return the list | Order ritasCroissants = new Order() {}, Order ritasMuffins = new Order() {} | Rita's Orders List = ritasCroissants, ritasMuffins ,... | Y |
-
-| Program will find a Vendor by Id | 2 | Vendor: katesShop | N |
-
-| Program will clear list of all Vendors | Delete | All Vendors deleted | N |
+| Program will find a Vendor by Id | 2 | Vendor: katesShop | Y |
+| Program will clear list of all Vendors | Delete | All Vendors deleted | Y |
 
 
 |  |  |  |  |
@@ -64,6 +62,7 @@ _Keep track of your Vendors with this easy to use organizer. Add new Vendors and
 | Bug : Message |  Resolved (Y/N) |  How was the issue resolved?  |
 | ------- | ----- | ------ | 
 | Cannot create an instance of the variable type 'Order' because it does not have the new() constraint [CafeVendors.Tests] | Y |  Correct name of test from `GetList_GetsListOfOrders_List<Order>()` to `GetList_GetsListOfOrders_OrderList()` |
+|  Assert.AreEqual failed. Expected:<System.Collections.Generic.List`1[CafeVendors.Models.Order]>. Actual:<System.Collections.Generic.List`1[CafeVendors.Models.Order]> | Y | Correct `Assert.AreEqual(x,y)` to `CollectionAssert.AreEqual(x,y)` |
 
 
 ## Support and contact details

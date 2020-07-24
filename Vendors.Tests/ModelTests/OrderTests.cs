@@ -8,9 +8,9 @@ namespace CafeVendors.Tests
   [TestClass]
   public class OrderTests : IDisposable
   {
-        public void Dispose()
+    public void Dispose()
     {
-      Vendor.ClearAll();
+      Order.ClearAll();
     }
 
     [TestMethod]
@@ -56,16 +56,29 @@ namespace CafeVendors.Tests
       int price = 20;
       string date = "Every Monday.";
       Order anotherOrder = new Order(title, description, price, date);
-      List<Order> anotherList = new List<Order> {anotherOrder};
+      string title02 = "order title";
+      string details02 = "order details";
+      int price02 = 5;
+      string date02 = "order date";
+      Order secondOrder = new Order(title02, details02, price02, date02);
+      List<Order> anotherList = new List<Order> {anotherOrder, secondOrder};
       List<Order> result = Order.GetAll();
-      Assert.AreEqual(anotherList, result);
+      CollectionAssert.AreEqual(anotherList, result);
     }
 
     [TestMethod]
-    public void FindOrder_ReturnsOrderByIdSearch_Vendor()
+    public void FindOrder_ReturnsOrderByIdSearch_Order()
     {
-      Order firstOrder = new Order("Rita's Order", "Details of Rita's weekly order", 20, "Every Monday");
-      Order secondOrder = new Order("Kate's order", "Details of Kate's order.", 15, "1st of the month");
+      string title01 = "order title";
+      string details01 = "order details";
+      int price01 = 5;
+      string date01 = "order date";
+      Order firstOrder = new Order(title01, details01, price01, date01);
+      string title02 = "order title";
+      string details02 = "order details";
+      int price02 = 5;
+      string date02 = "order date";
+      Order secondOrder = new Order(title02, details02, price02, date02);
       Order result = Order.FindOrder(1);
       Assert.AreEqual(firstOrder, result);
     }

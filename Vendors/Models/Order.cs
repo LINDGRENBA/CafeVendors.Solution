@@ -28,13 +28,12 @@ namespace CafeVendors.Models
 
     public static List<Order> GetAll()
     {
-      List<Order> newOrderList = new List<Order> {};
-      return newOrderList;
+      return _ordersList;
     }
 
     public static Order FindOrder(int searchId)
     {
-      return _ordersList[searchId];
+      return _ordersList[searchId - 1];
     }
   }
 }
