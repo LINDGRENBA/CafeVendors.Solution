@@ -1,6 +1,6 @@
 @using CafeVendors.Models;
 
-<h3>Here are the details for this vendor, including all of this vendor's orders.</h3>
+<h3>Here are the details for @Model["vendor"].Name, including all of @Model["vendor"].Name's orders.</h3>
 
 @if (@Model.["orders"].Count == 0)
 {

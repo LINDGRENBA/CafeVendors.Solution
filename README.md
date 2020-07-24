@@ -40,7 +40,7 @@ _Keep track of your Vendors with this easy to use organizer. Add new Vendors and
 
 ## Setup/Installation Requirements
 
-  1. Follow this [link to the project repository](PUT A GITHUB LINK HERE) on GitHub.  
+  1. Follow this [link to the project repository](https://github.com/LINDGRENBA/Pierres-Vendors) on GitHub.  
   2. Click on the "Clone or download" button to copy the project link.     
   3. If you are comfortable with the command line, you can copy the project link and clone it through your command line with the command `git clone`. Otherwise, I recommend choosing "**Download ZIP**".     
    4. Once the ZIP file has finished downloading, you can right click on the file to view the zip folder in your downloads.     
