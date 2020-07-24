@@ -24,5 +24,15 @@ namespace CafeVendors.Tests
       string result = firstVendor.Name;
       Assert.AreEqual(name, result);
     }
+
+        [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      string name = "Rita's Flower Shop";
+      string description = "A flower shop that sells pastries.";
+      Vendor firstVendor = new Vendor(name, description);
+      string result = firstVendor.Description;
+      Assert.AreEqual(description, result);
+    }
   }
 }
