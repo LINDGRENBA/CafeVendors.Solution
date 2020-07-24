@@ -12,7 +12,7 @@ namespace CafeVendors.Models
 
     public Vendor(string name, string description)
     {
-      Name = "";
+      Name = name;
       Description = description;
       _vendorList.Add(this);
       Id = _vendorList.Count;
