@@ -6,8 +6,14 @@ using System;
 namespace CafeVendors.Tests
 {
   [TestClass]
-  public class VendorTests //VendorTest ?
+  public class VendorTests : IDisposable 
+  //VendorTest ?
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
+
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
@@ -33,6 +39,17 @@ namespace CafeVendors.Tests
       Vendor firstVendor = new Vendor(name, description);
       string result = firstVendor.Description;
       Assert.AreEqual(description, result);
+    }
+
+    [TestMethod]
+    public void GetVendor_GetListOfVendors_VendorList()
+    {
+      string name = "Rita's Flower Shop";
+      string description = "A flower shop that sells pastries.";
+      Vendor firstVendor = new Vendor(name, description);
+      List<Vendor> newList = new List<Vendor> {firstVendor};
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }

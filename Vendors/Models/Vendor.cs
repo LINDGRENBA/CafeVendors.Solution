@@ -19,6 +19,17 @@ namespace CafeVendors.Models
       Orders = new List<Order> {};
     }
 
+    public static void ClearAll()
+    {
+      _vendorList.Clear();
+    }
+
+    public static List<Vendor> GetAll()
+    {
+      List<Vendor> newVendor = new List<Vendor> {};
+      return newVendor;
+    }
+
   }
 }
 
