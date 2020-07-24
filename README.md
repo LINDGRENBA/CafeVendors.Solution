@@ -14,13 +14,13 @@ _Keep track of your Vendors with this easy to use organizer. Add new Vendors and
 
 | Behavior   |   Input   |  Output |  Met? (Y/N)  |
 |----------|:-------------:|------:|-----------:|
-| Program should create instances of Vendor class with Name, Description and Orders List properties and Id | Vendor ritasShop = new Vendor {"Rita's Flowers", "A flower shop that sells pastries", {Order 1, Order 2, Order 3}} | ritasShop {Name: "Rita's Flowers", Description: "A flower shop that sells pastries", Orders List: {Order 1, Order 2, Order 3}, Id: 1} | N |  
-| Program should create and instance of Order class with Title, Description, Price and Date | Order ritasWeeklyOrder = new Order {"Croissants", "A weekly order of 15 croissants for Rita's flower shop", 20, "Weekly"} | ritasWeeklyOrder = {Title: "Croissants", Description: "A weekly order of 15 croissants for Rita's flower shop", Price: 20, Date: "Weekly"} | N |
+| Program should create instances of Vendor class with Name, Description and Orders List properties and Id | Vendor ritasShop = new Vendor() {"Rita's Flowers", "A flower shop that sells pastries", {Order 1, Order 2, Order 3}} | ritasShop {Name: "Rita's Flowers", Description: "A flower shop that sells pastries", Orders List: {Order 1, Order 2, Order 3}, Id: 1} | N |  
+| Program should add each new Vendor to a list | Vendor ritasShop = new Vendor() {}, Vendor katesShop = new Vendor() {} | Vendors List = ritasShop, katesShop ,... | N |
+| Program will get a list of all Vendors | Vendors.GetAll() | ritasShop, katesShop | N |
+| Program should create and instance of Order class with Title, Description, Price and Date | Order ritasWeeklyOrder = new Order() {"Croissants", "A weekly order of 15 croissants for Rita's flower shop", 20, "Weekly"} | ritasWeeklyOrder = {Title: "Croissants", Description: "A weekly order of 15 croissants for Rita's flower shop", Price: 20, Date: "Weekly"} | N |
+| Program should add each new Order to a list associated with a Vendor | Order ritasCroissants = new Order() {}, Order ritasMuffins = new Order() {} | Rita's Orders List = ritasCroissants, ritasMuffins ,... | N |
+| Program will get a list of all Orders | shopOrders.GetAll() | Croissants, Muffins, ... | N |
 |  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-
-    Create an Order class. This class should include properties for the title, the description, the price, the date, and any other properties you would like to include.
 
 
 ## Stretch Goals
