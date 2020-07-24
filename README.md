@@ -17,8 +17,7 @@ _Keep track of your Vendors with this easy to use organizer. Add new Vendors and
 | Program should create instances of Vendor class with Name, Description and Orders List properties and Id | Vendor ritasShop = new Vendor() {"Rita's Flowers", "A flower shop that sells pastries", {Order 1, Order 2, Order 3}} | ritasShop {Name: "Rita's Flowers", Description: "A flower shop that sells pastries", Orders List: {Order 1, Order 2, Order 3}, Id: 1} | Y |  
 | Program should add each new Vendor to a list and return the list of Vendors | Vendor ritasShop = new Vendor() {}, Vendor katesShop = new Vendor() {} | Vendors List = ritasShop, katesShop ,... | Y |
 | Program will get a list of all Vendors | Vendors.GetAll() | ritasShop, katesShop | Y |
-
-| Program will find a Vendor by Id | 2 | Vendor: katesShop | N |
+| Program will find a Vendor by Id | 2 | Vendor: katesShop | Y |
 
 | Program should create and instance of Order class with Title, Description, Price, Date and Id | Order ritasWeeklyOrder = new Order() {"Croissants", "A weekly order of 15 croissants for Rita's flower shop", 20, "Weekly"} | ritasWeeklyOrder = {Title: "Croissants", Description: "A weekly order of 15 croissants for Rita's flower shop", Price: 20, Date: "Weekly", Id: 1} | N |
 
