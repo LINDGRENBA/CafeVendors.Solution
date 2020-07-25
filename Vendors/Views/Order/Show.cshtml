@@ -1,0 +1,9 @@
+@using CafeVendors.Models;
+
+<h3>Vendor's Order Details:</h3>
+
+<h4>@Model["order"].Description</h4>
+<h4>Vendor: @Model["vendor"].Name</h4>
+
+<a href="/vendors/@Model["vendor"].Id/orders/new">Add another order</a>
+<a href="vendors">See list of all vendors</a>
