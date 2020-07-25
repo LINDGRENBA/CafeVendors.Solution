@@ -49,7 +49,7 @@ namespace CafeVendors.Controllers
       foundVendor.AddOrder(newOrder); 
       // need to write AddOrder method
       List<Order> vendorOrders = foundVendor.Orders;
-      model.Add("items", vendorOrders);
+      model.Add("orders", vendorOrders);
       model.Add("vendor", foundVendor);
       return View("Show", model);
     }
