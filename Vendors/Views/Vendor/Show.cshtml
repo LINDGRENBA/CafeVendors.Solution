@@ -1,10 +1,11 @@
 @using CafeVendors.Models;
+@* @using System.Collections.Generic; *@
 
 <h3>Here are the details for @Model["vendor"].Name, including all of @Model["vendor"].Name's orders.</h3>
 
-@if (@Model.["orders"].Count == 0)
+@if (!@Model.ContainsValue("orders"))
 {
-  <h3>This vendor doesn't have any orders associated with their account yet.</h3>
+  <h4>@Model["vendor"].Name doesn't have any orders associated with their account yet.</h4>
 }
 
 <ol>
