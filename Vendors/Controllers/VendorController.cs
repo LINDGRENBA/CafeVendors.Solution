@@ -38,6 +38,20 @@ namespace CafeVendors.Controllers
       model.Add("orders", vendorOrders);
       return View(model); //passing whole dictionary
     }
+
+    // route below creates new orders for a given vendor
+    [HttpPost("/vendors/{vendorId}/orders")]
+    public ActionResult Create(int vendorId, string orderTitle, string orderDescription, int orderPrice, string orderDate)
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor foundVendor = Vendor.FindVendor(vendorId);
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
+      foundVendor.AddOrder(newOrder); 
+      // need to write AddOrder method
+      List<Order> vendorOrders = foundVendor.Orders;
+      model.Add("items", vendorOrders);
+      model.Add("vendor", foundVendor);
+      return View("Show", model);
+    }
   }
-  
 }
