@@ -34,10 +34,9 @@ namespace CafeVendors.Models
       return _vendorList[searchId - 1];
     }
 
-    public List<Order> AddOrder(Order order)
+    public void AddOrder(Order order)
     {
-      List<Order> Orders = new List<Order> {};
-      return Orders;
+      Orders.Add(order);
     }
 
   }
