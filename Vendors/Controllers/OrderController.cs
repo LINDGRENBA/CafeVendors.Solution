@@ -9,9 +9,10 @@ namespace CafeVendors.Controllers
   public class OrderController : Controller
   {
     [HttpGet("vendors/{vendorId}/orders/new")]
-    public ActionResult New()
+    public ActionResult New(int vendorId)
     {
-      return View();
+      Vendor vendor = Vendor.FindVendor(vendorId);
+      return View(vendor);
     }
   }
 }
