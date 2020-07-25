@@ -63,5 +63,16 @@ namespace CafeVendors.Tests
       Vendor result = Vendor.FindVendor(1);
       Assert.AreEqual(firstVendor, result);
     }
+
+    [TestMethod]
+    public void AddOrder_AddsOrderToAssociatedCategory_OrderList()
+    {
+      Order newOrder = new Order("title", "description", 20, "date");
+      List<Order> newList = new List<Order> {newOrder};
+      Vendor newVendor = new Vendor("Rita", "Flower show serving pastries");
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
