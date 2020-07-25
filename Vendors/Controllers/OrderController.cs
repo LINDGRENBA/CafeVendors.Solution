@@ -15,7 +15,7 @@ namespace CafeVendors.Controllers
       return View();
     }
 
-    [HttpGet("/vendors/{vendorId}/orders/{orderId")]
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
     {
       Order order = Order.FindOrder(orderId);
