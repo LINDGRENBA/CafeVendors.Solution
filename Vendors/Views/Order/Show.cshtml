@@ -1,9 +1,13 @@
 @using CafeVendors.Models;
 
-<h3>Vendor's Order Details:</h3>
+<h1>@Model["vendor"].Name's Order Details:</h1>
 
-<h4>@Model["order"].Description</h4>
-<h4>Vendor: @Model["vendor"].Name</h4>
+<h3>Vendor: @Model["vendor"].Name</h3>
+<h4>Order Title: @Model["order"].Title</h4>
+<h4>Order Description: @Model["order"].Description</h4>
+<h4>Order Price: $@Model["order"].Price</h4>
+<h4>Order Date: @Model["order"].Date</h4>
 
-<a href="/vendors/@Model["vendor"].Id/orders/new">Add another order</a>
-<a href="/vendors">See list of all vendors</a>
+
+<h4><a href="/vendors/@Model["vendor"].Id/orders/new">Add another order</a></h4>
+<h4><a href="/vendors">See list of all vendors</a></h4>

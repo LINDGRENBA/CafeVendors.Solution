@@ -37,10 +37,9 @@ namespace CafeVendors.Controllers
       List<Order> vendorOrders = selectedVendor.Orders;
       model.Add("vendor", selectedVendor);
       model.Add("orders", vendorOrders);
-      return View(model); //passing whole dictionary
+      return View(model); 
     }
 
-    // route below creates new orders for a given vendor
     [HttpPost("/vendors/{vendorId}/orders")]
     public ActionResult Create(int vendorId, string orderTitle, string orderDescription, int orderPrice, string orderDate)
     {
@@ -48,7 +47,6 @@ namespace CafeVendors.Controllers
       Vendor foundVendor = Vendor.FindVendor(vendorId);
       Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
       foundVendor.AddOrder(newOrder); 
-      // need to write AddOrder method
       List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);
       model.Add("vendor", foundVendor);
