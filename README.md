@@ -7,7 +7,7 @@
 
 ## Description
 
-_Keep track of your Vendors with this easy to use organizer. Add new Vendors and view a list of those you work with regularly to make your job easier and your business more organized _
+Keep track of your Vendors with this easy to use organizer. Add new Vendors and view a list of those you work with regularly to make your job easier and your business more organized 
 
 
 ## Specifications
@@ -21,26 +21,20 @@ _Keep track of your Vendors with this easy to use organizer. Add new Vendors and
 | Program will find a Vendor by Id | 2 | Vendor: katesShop | Y |
 | Program will clear list of all Vendors | Delete | All Vendors deleted | Y |
 | Program should create and instance of Order class with Title, Description, Price, Date and Id | Order ritasWeeklyOrder = new Order() {"Croissants", "A weekly order of 15 croissants for Rita's flower shop", 20, "Weekly"} | ritasWeeklyOrder = {Title: "Croissants", Description: "A weekly order of 15 croissants for Rita's flower shop", Price: 20, Date: "Weekly", Id: 1} | Y |
-| Program should add each new Order to a list associated with a Vendor and return the list | Order ritasCroissants = new Order() {}, Order ritasMuffins = new Order() {} | Rita's Orders List = ritasCroissants, ritasMuffins ,... | N |
-
-
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| Program should add each new Order to a list associated with a Vendor and return the list | Order ritasCroissants = new Order() {}, Order ritasMuffins = new Order() {} | Rita's Orders List = ritasCroissants, ritasMuffins ,... | Y |
 
 
 ## Stretch Goals
 | Behavior   |   Input   |  Output |  Met? (Y/N)  |
 |----------|:-------------:|------:|-----------:|
 | Program will delete an Order by Id | 2 | "Kate's Blackberry Tarts order has been deleted" | N |
-
 | Program will delete a Vendor by Id | 2 | "Kate's shop has been deleted." | N |
-|  |  |  |  |
+
 
 
 ## Setup/Installation Requirements
 
-  1. Follow this [link to the project repository](https://github.com/LINDGRENBA/Pierres-Vendors) on GitHub.  
+  1. Follow this [link to the project repository](https://github.com/LINDGRENBA/CafeVendors.Solution) on GitHub.  
   2. Click on the "Clone or download" button to copy the project link.     
   3. If you are comfortable with the command line, you can copy the project link and clone it through your command line with the command `git clone`. Otherwise, I recommend choosing "**Download ZIP**".     
    4. Once the ZIP file has finished downloading, you can right click on the file to view the zip folder in your downloads.     
