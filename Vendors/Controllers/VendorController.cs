@@ -26,7 +26,7 @@ namespace CafeVendors.Controllers
     public ActionResult Create(string vendorName, string vendorDescription)
     {
       Vendor newVendor = new Vendor(vendorName, vendorDescription);
-      return RedirectToAction("Index"); //need to get this to route back to home page
+      return View("~/Views/Home/Index.cshtml");
     }
 
     [HttpGet("/vendors/{id}")]

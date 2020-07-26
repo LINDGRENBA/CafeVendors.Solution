@@ -12,8 +12,6 @@ namespace CafeVendors.Controllers
     public ActionResult New(int vendorId)
     {
       Vendor vendor = Vendor.FindVendor(vendorId);
-      // Console.WriteLine(Vendor.FindVendor(vendorId));
-      // Console.WriteLine(vendorId);
       return View(vendor);
     }
 
